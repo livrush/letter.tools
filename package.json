@@ -1,13 +1,11 @@
 {
-  "name": "cover-letter-me",
+  "name": "letter-tools",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "@material-ui/icons": "^4.2.1",
-    "material-icons": "^0.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
@@ -19,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "style": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js sass/style.scss css/style.css",
+    "style": "node-sass src/sass/style.scss src/css/style.css -w",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {

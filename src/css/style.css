@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
+.basic-box, .button, .input {
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: white; }
+
+.shadow-main, .button {
+  box-shadow: 1px 2px 4px #CCC; }
+
+.shadow-low, .button:active {
+  box-shadow: 0 1px 2px #CCC; }
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 8px; }
+
+.title {
+  font-family: 'Work Sans', sans-serif; }
+
+.button {
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative; }
+  .button:active {
+    top: 1px;
+    left: 1px; }
+  .button:focus {
+    outline: none; }
+
+.button-group .button {
+  border-radius: 0; }
+
+.button-group .button:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
+
+.button-group .button:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem; }
+
+.input-container {
+  display: flex;
+  flex-direction: column; }
+
+.input-label {
+  font-size: 2rem;
+  padding-bottom: 1rem; }
+
+.input {
+  color: blue;
+  font-size: 2.25rem;
+  border: 1px solid grey; }
