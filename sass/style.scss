@@ -1,6 +1,15 @@
 @import "compass/reset";
 @import "_vars";
 @import "_animations";
+@import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap');
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-family: 'Work Sans', sans-serif;
+}
 
 .input-container {
   display: flex;
