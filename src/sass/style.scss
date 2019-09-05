@@ -28,6 +28,10 @@ html {
   &:focus {
     outline: none;
   }
+  .button-text:nth-child(2) {
+    margin-left: 1rem;
+    background: green;
+  }
 }
 
 .button-group {

@@ -3,13 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Button = ({ icon, text }) => {
   const IconComponent = icon ?
-    <FontAwesomeIcon icon={icon} /> :
+    <FontAwesomeIcon className="button-icon" icon={icon} /> :
     null;
   return (
   <button className="button">
-    <span className="button-icon">
-      { IconComponent }
-    </span>
+    { IconComponent }
     <span className="button-text">
       {text}
     </span>
