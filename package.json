@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/icons": "^4.2.1",
+    "material-icons": "^0.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.1",
@@ -14,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
+    "style": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js sass/style.scss css/style.css",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
@@ -33,8 +39,11 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-centered": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
     "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11"
+    "@storybook/react": "^5.1.11",
+    "node-sass": "^4.12.0",
+    "node-sass-package-importer": "^5.3.2"
   }
 }
