@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './';
+import { Button } from '.';
 
 export const ButtonGroup = ({ config }) => (
   <div className="button-group">
