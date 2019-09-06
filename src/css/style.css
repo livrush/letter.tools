@@ -1,25 +1,180 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
-.basic-box, .button, .injections-container, .input {
+.basic-box, .home-letter, .button, .injections-container, .input {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.5rem;
   background: white; }
 
-.shadow-main, .button, .injections-container {
+.shadow-main, .home-letter, .header, .button, .injections-container {
   box-shadow: 1px 2px 4px #CCC; }
 
 .shadow-low, .button:active {
   box-shadow: 0 1px 4px #CCC; }
 
+.t-black {
+  color: #333; }
+
+.t-green {
+  color: #0F9D58; }
+
+.t-red {
+  color: #EA4335; }
+
+.t-yellow {
+  color: #FBBC04; }
+
+.t-blue {
+  color: #4285F4; }
+
+@keyframes prefix-scroll-down {
+  0% {
+    bottom: 100%; }
+  8% {
+    bottom: 0%; }
+  16% {
+    bottom: 0%; }
+  24% {
+    bottom: -100%; }
+  32% {
+    bottom: -100%; }
+  40% {
+    bottom: -200%; }
+  48% {
+    bottom: -200%; }
+  56% {
+    bottom: -300%; }
+  64% {
+    bottom: -300%; }
+  72% {
+    bottom: -400%; }
+  80% {
+    bottom: -400%; }
+  88% {
+    bottom: -500%; }
+  100% {
+    bottom: -500%; } }
+
+.prefix-scroll-down, .home-letter-prefix-container {
+  animation-name: prefix-scroll-down;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
+.basic-box, .home-letter, .button, .injections-container, .input {
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  background: white; }
+
+.shadow-main, .home-letter, .header, .button, .injections-container {
+  box-shadow: 1px 2px 4px #CCC; }
+
+.shadow-low, .button:active {
+  box-shadow: 0 1px 4px #CCC; }
+
+.t-black {
+  color: #333; }
+
+.t-green {
+  color: #0F9D58; }
+
+.t-red {
+  color: #EA4335; }
+
+.t-yellow {
+  color: #FBBC04; }
+
+.t-blue {
+  color: #4285F4; }
+
+@keyframes prefix-scroll-down {
+  0% {
+    bottom: 100%; }
+  8% {
+    bottom: 0%; }
+  16% {
+    bottom: 0%; }
+  24% {
+    bottom: -100%; }
+  32% {
+    bottom: -100%; }
+  40% {
+    bottom: -200%; }
+  48% {
+    bottom: -200%; }
+  56% {
+    bottom: -300%; }
+  64% {
+    bottom: -300%; }
+  72% {
+    bottom: -400%; }
+  80% {
+    bottom: -400%; }
+  88% {
+    bottom: -500%; }
+  100% {
+    bottom: -500%; } }
+
+.prefix-scroll-down, .home-letter-prefix-container {
+  animation-name: prefix-scroll-down;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
+.home-letter {
+  padding: 2rem 2rem 5rem;
+  width: 26rem;
+  text-align: center; }
+
+.home-letter-top {
+  display: flex;
+  margin-bottom: 5rem;
+  height: 2.375rem;
+  position: relative;
+  overflow: hidden; }
+
+.home-letter-prefix-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 0;
+  right: 51%;
+  text-align: right; }
+
+.home-letter-title {
+  position: absolute;
+  margin: 0;
+  left: 51%; }
+
+.home-letter-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px; }
 
+.header {
+  background: white;
+  width: 100vw;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem; }
+
 .title {
-  font-family: 'Work Sans', sans-serif; }
+  font-family: 'Work Sans', sans-serif;
+  font-size: 2rem; }
 
 .button {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
   position: relative; }
   .button:hover {
@@ -31,6 +186,13 @@ html {
     outline: none; }
   .button .button-text:nth-child(2) {
     margin-left: 0.5rem; }
+  .button.header-button {
+    border: 0;
+    box-shadow: 0 0 0 0;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .button.header-button:hover {
+      background: white; }
 
 .button-group .button {
   border-radius: 0;

@@ -1,25 +1,42 @@
-// @import "compass/reset";
 @import "_vars";
 @import "_helpers";
 @import "_animations";
-// @import '~material-icons/iconfont/material-icons.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap');
+@import "home";
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
+.header {
+  @extend .shadow-main;
+  background: white;
+  width: 100vw;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
 .title {
   font-family: 'Work Sans', sans-serif;
+  font-size: 2rem;
 }
 
 .button {
   @extend .basic-box;
   @extend .shadow-main;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
   position: relative;
+
   &:hover {
     background: #EEE;
   }
@@ -33,6 +50,15 @@ html {
   }
   .button-text:nth-child(2) {
     margin-left: 0.5rem;
+  }
+  &.header-button {
+    border: 0;
+    box-shadow: 0 0 0 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &:hover {
+      background: white;
+    }
   }
 }
 

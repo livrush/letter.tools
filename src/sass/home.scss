@@ -1,0 +1,46 @@
+@import "_vars";
+@import "_helpers";
+@import "_animations";
+
+.home-letter {
+  @extend .basic-box;
+  @extend .shadow-main;
+  padding: 2rem 2rem 5rem;
+  width: 26rem;
+  text-align: center;
+}
+
+.home-letter-top {
+  display: flex;
+  margin-bottom: 5rem;
+  height: 2.375rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-letter-prefix-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  // bottom: 80%;
+  margin: 0;
+  right: 51%;
+  text-align: right;
+  @extend .prefix-scroll-down;
+}
+
+// .home-letter-prefix {
+// }
+
+.home-letter-title {
+  position: absolute;
+  margin: 0;
+  left: 51%;
+}
+
+.home-letter-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}

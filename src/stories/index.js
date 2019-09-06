@@ -8,12 +8,14 @@ import '../css/style.css';
 import {
   ActionBar,
   Button,
-  Input,
   ButtonGroup,
+  Header,
+  HomeLetter,
   InjectionColumn,
+  Input,
 } from '../components';
 
-storiesOf('Components/Button', module)
+storiesOf('Components', module)
   .addDecorator(centered)
   .add('Action Bar', () => <ActionBar />);
 
@@ -24,18 +26,17 @@ storiesOf('Components/Button', module)
   .add('Group', () => <ButtonGroup config={[
     { text: 'Button' },
     { icon: faCat },
-    {
-      icon: faCat,
-      text: 'Cat',
-    },
+    { icon: faCat, text: 'Cat' },
   ]} />);
 
 storiesOf('Components', module)
   .addDecorator(centered)
-  .add('InjectionColumn', () => <InjectionColumn config={[
-    { content: 'Costa Rican Colon' },
-    { content: 'Generic Chips' },
-    { content: 'Key' },
-    { content: 'Orchestrator' },
+  .add('Header', () => <Header />)
+  .add('HomeLetter', () => <HomeLetter />)
+  .add('Injection Column', () => <InjectionColumn config={[
+    { content: 'Salutation' },
+    { content: 'Company' },
+    { content: 'Position' },
+    { content: 'Skill 1' },
   ]} />)
   .add('Input', () => <Input content="Option" />);

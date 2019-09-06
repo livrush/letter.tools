@@ -1,0 +1,22 @@
+@keyframes prefix-scroll-down {
+  0% { bottom: 100%; }
+  8% { bottom: 0%; }
+  16% { bottom: 0%; }
+  24% { bottom: -100%; }
+  32% { bottom: -100%; }
+  40% { bottom: -200%; }
+  48% { bottom: -200%; }
+  56% { bottom: -300%; }
+  64% { bottom: -300%; }
+  72% { bottom: -400%; }
+  80% { bottom: -400%; }
+  88% { bottom: -500%; }
+  100% { bottom: -500%; }
+}
+
+.prefix-scroll-down {
+  animation-name: prefix-scroll-down;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
