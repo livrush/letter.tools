@@ -1,56 +1,71 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
-.basic-box, .button, .input {
+.basic-box, .button, .injections-container, .input {
   border: 0;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
   background: white; }
 
-.shadow-main, .button {
+.shadow-main, .button, .injections-container {
   box-shadow: 1px 2px 4px #CCC; }
 
 .shadow-low, .button:active {
-  box-shadow: 0 1px 2px #CCC; }
+  box-shadow: 0 1px 4px #CCC; }
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 8px; }
+  font-size: 16px; }
 
 .title {
   font-family: 'Work Sans', sans-serif; }
 
 .button {
-  font-size: 3rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: relative; }
+  .button:hover {
+    background: #EEE; }
   .button:active {
     top: 1px;
     left: 1px; }
   .button:focus {
     outline: none; }
   .button .button-text:nth-child(2) {
-    margin-left: 1rem;
-    background: green; }
+    margin-left: 0.5rem; }
 
 .button-group .button {
-  border-radius: 0; }
+  border-radius: 0;
+  border-right: 1px solid #CCC; }
 
 .button-group .button:first-child {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem; }
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
 
 .button-group .button:last-child {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem; }
+  border-right: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
+
+.injections-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem; }
 
 .input-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-bottom: 0.5rem; }
 
 .input-label {
-  font-size: 2rem;
-  padding-bottom: 1rem; }
+  font-size: 0.75rem;
+  padding-bottom: 0.5rem; }
 
 .input {
-  color: blue;
-  font-size: 2.25rem;
+  font-size: 1rem;
   border: 1px solid grey; }
+
+.actionBar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row; }

@@ -7,7 +7,7 @@
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .title {
@@ -17,9 +17,12 @@ html {
 .button {
   @extend .basic-box;
   @extend .shadow-main;
-  font-size: 3rem;
+  font-size: 1.5rem;
   cursor: pointer;
   position: relative;
+  &:hover {
+    background: #EEE;
+  }
   &:active {
     @extend .shadow-low;
     top: 1px;
@@ -29,38 +32,55 @@ html {
     outline: none;
   }
   .button-text:nth-child(2) {
-    margin-left: 1rem;
-    background: green;
+    margin-left: 0.5rem;
   }
 }
 
 .button-group {
   .button {
     border-radius: 0;
+    border-right: 1px solid $grey;
   }
   .button:first-child {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
   }
   .button:last-child {
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-right: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
   }
+}
+
+.injections-container {
+  @extend .basic-box;
+  @extend .shadow-main;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .input-label {
-  font-size: 2rem;
-  padding-bottom: 1rem;
+  font-size: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .input {
   @extend .basic-box;
-  color: blue;
-  font-size: 2.25rem;
+  font-size: 1rem;
   border: 1px solid grey;
+}
+
+.actionBar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
 }
