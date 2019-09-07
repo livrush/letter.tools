@@ -1,0 +1,19 @@
+.nav {
+  @extend .shadow-main;
+  @extend .margin-bottom-common;
+  background: white;
+  width: 100vw;
+}
+
+.header {
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  padding: 3rem 1rem;
+  text-align: center;
+}

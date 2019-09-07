@@ -1,7 +1,7 @@
 .basic-box {
   border: 0;
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background: white;
 }
 
@@ -13,8 +13,22 @@
   box-shadow: 0 1px 4px $grey;
 }
 
+.remove-focus-outline {
+  outline: none;
+}
+
+.margin-bottom-common {
+  margin-bottom: 1.25rem;
+}
+
 .t-black   { color: $black  }
 .t-green   { color: $green  }
 .t-red     { color: $red    }
 .t-yellow  { color: $yellow }
 .t-blue    { color: $blue   }
+
+// Simple Grid Overwrites
+
+.row [class^="col"] {
+  margin: 0 2%;
+}

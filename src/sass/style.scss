@@ -1,6 +1,8 @@
 @import "_vars";
 @import "_helpers";
 @import "_animations";
+@import "header-footer";
+@import "../lib/simple-grid/simple-grid.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap');
 @import "home";
 
@@ -13,21 +15,15 @@ html {
   font-size: 16px;
 }
 
-.header {
-  @extend .shadow-main;
-  background: white;
-  width: 100vw;
-  height: 2.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
+body {
+  margin: 0;
 }
 
-.title {
+.logo {
   font-family: 'Work Sans', sans-serif;
-  font-size: 2rem;
+  &.title {
+    font-size: 1.25rem;
+  }
 }
 
 .button {
@@ -46,7 +42,7 @@ html {
     left: 1px;
   }
   &:focus {
-    outline: none;
+    @extend .remove-focus-outline;
   }
   .button-text:nth-child(2) {
     margin-left: 0.5rem;
@@ -78,13 +74,20 @@ html {
   }
 }
 
+.letter-title {
+  @extend .margin-bottom-common;
+  @extend .remove-focus-outline;
+  font-size: 1.25rem;
+  line-height: 2.875rem;
+  margin-top: 0;
+}
+
 .injections-container {
   @extend .basic-box;
   @extend .shadow-main;
+  @extend .margin-bottom-common;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  margin: 1rem;
 }
 
 .input-container {
@@ -105,8 +108,24 @@ html {
 }
 
 .actionBar-container {
+  @extend .margin-bottom-common;
   display: flex;
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
+}
+
+.letter-container {
+  @extend .basic-box;
+  @extend .shadow-main;
+  @extend .margin-bottom-common;
+  padding: 3rem 1rem;
+}
+
+.letter-textarea {
+  @extend .remove-focus-outline;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
 
-const ListPage = () => {
+export const ListPage = () => {
   return (<div>List</div>)
 }

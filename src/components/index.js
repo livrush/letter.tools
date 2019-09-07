@@ -5,3 +5,4 @@ export * from './Header';
 export * from './HomeLetter';
 export * from './InjectionColumn';
 export * from './Input';
+export * from './Letter';

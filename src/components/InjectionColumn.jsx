@@ -6,7 +6,7 @@ export const InjectionColumn = ({ config }) => (
     <h2 className="injections-title">Injections</h2>
     {
       config.map(({ content }) => (
-        <Input content={content} />
+        <Input key={content} content={content} />
       ))
     }
   </div>
