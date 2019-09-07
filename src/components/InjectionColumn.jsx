@@ -3,7 +3,7 @@ import { Input } from '.';
 
 export const InjectionColumn = ({ config }) => (
   <div className="injections-container">
-    <h1 className="injections-title">Injections</h1>
+    <h2 className="injections-title">Injections</h2>
     {
       config.map(({ content }) => (
         <Input content={content} />
