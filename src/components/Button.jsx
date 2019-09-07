@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export const Button = ({ icon, text, ...rest }) => {
+const Button = ({ icon, text, ...rest }) => {
   const IconComponent = icon ?
     <FontAwesomeIcon className="button-icon" icon={icon} /> :
     null;
@@ -16,3 +17,15 @@ export const Button = ({ icon, text, ...rest }) => {
     { TextComponent }
   </button>
 )};
+
+Button.protoTypes = {
+  icon: PropTypes.node,
+  text: PropTypes.string,
+};
+
+Button.defaultProps = {
+  icon: null,
+  text: '',
+};
+
+export { Button };

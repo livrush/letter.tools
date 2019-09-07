@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '.';
 
-export const ButtonGroup = ({ config }) => (
+const ButtonGroup = ({ config }) => (
   <div className="button-group">
     {
       config.map(({ icon, text, ...rest }) => (
@@ -9,4 +10,13 @@ export const ButtonGroup = ({ config }) => (
       ))
     }
   </div>
-)
+);
+
+ButtonGroup.propTypes = {
+  config: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.node,
+    text: PropTypes.string,
+  })).isRequired,
+};
+
+export { ButtonGroup };

@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Letter extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  static defaultProps = {
+    edit: true,
+  }
 
   componentDidMount() {
     const textarea = document
@@ -36,6 +37,11 @@ class Letter extends React.Component {
     </div>
     );
   }
+};
+
+Letter.propTypes = {
+  edit: PropTypes.bool,
+  letterText: PropTypes.string.isRequired,
 };
 
 export { Letter };

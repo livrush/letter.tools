@@ -1,5 +1,4 @@
 import React from 'react';
-import { ButtonGroup } from '.';
 import {
   faDownload,
   faEdit,
@@ -8,6 +7,7 @@ import {
   faFile,
   faSave,
 } from '@fortawesome/free-solid-svg-icons';
+import { ButtonGroup } from '.';
 
 export const ActionBar = () => (
   <div className="actionBar-container">
@@ -26,4 +26,4 @@ export const ActionBar = () => (
       ]}
     />
   </div>
-)
+);

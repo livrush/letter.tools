@@ -2,11 +2,14 @@ import React from 'react';
 import { ActionBar, InjectionColumn, Letter } from '../components';
 import instructions from '../lib/instructions';
 
-export const LetterPage = () => (
+const LetterPage = () => (
   <div className="container">
     <div className="row">
       <div className="col-4">
-        <h2 class="letter-title" contenteditable="true">Title</h2>
+        <h2
+          class="letter-title"
+          contenteditable="true"
+        >Title</h2>
         <InjectionColumn
           config={[
             { content: 'Salutation' },
@@ -26,3 +29,7 @@ export const LetterPage = () => (
     </div>
   </div>
 );
+
+LetterPage.propTypes = {};
+
+export { LetterPage };

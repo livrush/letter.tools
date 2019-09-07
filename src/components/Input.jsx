@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Input = ({ content }) => (
+const Input = ({ content }) => (
   <div className="input-container">
     <label className="input-label">
       {content}
@@ -14,3 +15,9 @@ export const Input = ({ content }) => (
     />
   </div>
 );
+
+Input.propTypes = {
+  content: PropTypes.string.isRequired,
+};
+
+export { Input };
