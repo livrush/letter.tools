@@ -65,9 +65,4 @@ const reducers = combineReducers({
   letter: letterReducer,
 });
 
-// export {
-//   variablesReducer,
-//   letterReducer,
-// };
-
 export default reducers;
