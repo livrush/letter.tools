@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ variable }) => (
+const VariableInput = ({ variable }) => (
   <div className="input-container">
     <label className="input-label">
       {variable.name}
@@ -16,11 +16,11 @@ const Input = ({ variable }) => (
   </div>
 );
 
-Input.propTypes = {
+VariableInput.propTypes = {
   variable: PropTypes.shape({
     name: PropTypes.string.isRequired,
     value: PropTypes.string,
   }).isRequired,
 };
 
-export { Input };
+export { VariableInput };

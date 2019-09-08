@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { HomePage, LetterPage, ListPage, } from './pages';
+import { HomePage, CreatePage, ListPage, } from './pages';
 import { Header } from './components';
 
 function mapStateToProps(state) {
@@ -22,7 +22,7 @@ function App() {
         </Switch>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/create" component={connect(mapStateToProps)(LetterPage)} />
+          <Route path="/create" component={connect(mapStateToProps)(CreatePage)} />
           <Route path="/list" component={ListPage} />
         </Switch>
       </Router>

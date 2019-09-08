@@ -12,7 +12,7 @@ import {
   Header,
   HomeLetter,
   VariableColumn,
-  Input,
+  VariableInput,
 } from '../components';
 
 storiesOf('Components', module)
@@ -39,4 +39,4 @@ storiesOf('Components', module)
     { content: 'Position' },
     { content: 'Skill 1' },
   ]} />)
-  .add('Input', () => <Input content="Option" />);
+  .add('VariableInput', () => <VariableInput content="Option" />);

@@ -4,5 +4,5 @@ export * from './ButtonGroup';
 export * from './Header';
 export * from './HomeLetter';
 export * from './VariableColumn';
-export * from './Input';
+export * from './VariableInput';
 export * from './Letter';

@@ -31,6 +31,7 @@ class Letter extends React.Component {
         {letterText.split('\n').map((line, i) => <p key={line.slice(0, 5) || `Empty-${i}`}>{line}</p>)}
       </div>
     );
+
     return (
       <div className="letter-container">
       { edit ? editing : displaying }

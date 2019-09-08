@@ -18,7 +18,11 @@ import { instructions } from '../lib';
 //   ...
 // },
 
-function variablesReducer(variables = {}, action) {
+function variablesReducer(variables = {
+  salutation: '',
+  variable: '',
+  regards: '',
+}, action) {
   switch(action.type) {
     case UPDATE_LETTER_CONTENT:
       // todo: make sure this is actually getting an array of names,
@@ -47,7 +51,7 @@ function variablesReducer(variables = {}, action) {
 // }
 
 function letterReducer(letter = {
-  edit: true,
+  edit: false,
   title: 'Untitled Letter',
   content: instructions,
 }, action) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActionBar, VariableColumn, Letter } from '../components';
 
-const LetterPage = ({ letter }) => (
+const CreatePage = ({ letter, variables }) => (
   <div className="container">
     <div className="row">
       <div className="col-4">
@@ -10,12 +10,7 @@ const LetterPage = ({ letter }) => (
           // contentEditable="true"
         >{letter.title}</h2>
         <VariableColumn
-          config={{
-            Salutation: '',
-            Company: '',
-            Position: '',
-            Skill: '',
-          }}
+          config={variables}
         />
       </div>
       <div className="col-8">
@@ -29,6 +24,6 @@ const LetterPage = ({ letter }) => (
   </div>
 );
 
-LetterPage.propTypes = {};
+CreatePage.propTypes = {};
 
-export { LetterPage };
+export { CreatePage };
