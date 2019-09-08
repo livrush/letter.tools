@@ -13,7 +13,8 @@ const VariableInputBase = ({ variable, updateVariable }) => (
       type="text"
       name={variable.name}
       id={variable.name}
-      onKeyUp={({ target }) => updateVariable({ [variable.name]: target.value })}
+      value={variable.value}
+      onChange={({ target }) => updateVariable({ [variable.name]: target.value })}
     />
   </div>
 );

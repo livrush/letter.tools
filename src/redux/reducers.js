@@ -28,9 +28,9 @@ function test(state = 'TEST VALUE', action) {
 // },
 
 function variablesReducer(variables = {
-  salutation: '',
-  variable: '',
-  regards: '',
+  salutation: 'Dear user,',
+  example: '{{variables}}',
+  regards: 'Good luck with your letters!',
 }, action) {
   switch(action.type) {
     case UPDATE_LETTER_CONTENT:
