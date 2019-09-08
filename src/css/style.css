@@ -258,7 +258,13 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite; }
 
+.homePage-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0; }
+
 .home-letter {
+  max-width: 90%;
   padding: 2rem 2rem 5rem;
   width: 26rem;
   text-align: center; }
@@ -277,6 +283,9 @@
   margin: 0;
   right: 51%;
   text-align: right; }
+
+.home-letter-prefix {
+  font-size: 2rem; }
 
 .home-letter-title {
   position: absolute;

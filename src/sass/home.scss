@@ -2,9 +2,16 @@
 @import "_helpers";
 @import "_animations";
 
+.homePage-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
 .home-letter {
   @extend .basic-box;
   @extend .shadow-main;
+  max-width: 90%;
   padding: 2rem 2rem 5rem;
   width: 26rem;
   text-align: center;
@@ -29,8 +36,9 @@
   @extend .prefix-scroll-down;
 }
 
-// .home-letter-prefix {
-// }
+.home-letter-prefix {
+  font-size: 2rem;
+}
 
 .home-letter-title {
   position: absolute;
