@@ -8,4 +8,4 @@ Once you set your variables they should show up in the left side column, and you
 
 {{regards}}`;
 
-export default instructions;
+export { instructions };

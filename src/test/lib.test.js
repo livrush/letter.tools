@@ -1,10 +1,11 @@
 import { expect } from 'chai';
 import faker from 'faker';
-import instructions from '../lib/instructions';
+// import instructions from '../lib/instructions';
 import {
+  instructions,
   readVariables,
   replaceVariables,
-} from '../lib/readVariables';
+} from '../lib';
 
 describe('readVariables', function () {
   it('should return one value', function () {
