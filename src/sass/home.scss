@@ -52,3 +52,7 @@
   justify-content: space-around;
   width: 100%;
 }
+
+.home-letter-link {
+  @extend .button;
+}

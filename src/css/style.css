@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
-.basic-box, .home-letter, .button, .injections-container, .input, .letter-container {
+.basic-box, .button, .home-letter-link, .home-letter, .injections-container, .input, .letter-container {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   background: white; }
 
-.shadow-main, .nav, .home-letter, .button, .injections-container, .letter-container {
+.shadow-main, .button, .home-letter-link, .nav, .home-letter, .injections-container, .letter-container {
   box-shadow: 1px 2px 4px #CCC; }
 
-.shadow-low, .button:active {
+.shadow-low, .button:active, .home-letter-link:active {
   box-shadow: 0 1px 4px #CCC; }
 
-.remove-focus-outline, .button:focus, .letter-title, .letter-textarea {
+.remove-focus-outline, .button:focus, .home-letter-link:focus, .letter-title, .letter-textarea {
   outline: none; }
 
 .margin-bottom-common, .nav, .letter-title, .injections-container, .actionBar-container, .letter-container {
@@ -31,6 +31,25 @@
 
 .t-blue {
   color: #4285F4; }
+
+.button, .home-letter-link {
+  font-size: 1.25rem;
+  cursor: pointer;
+  position: relative; }
+  .button:hover, .home-letter-link:hover {
+    background: #EEE; }
+  .button:active, .home-letter-link:active {
+    top: 1px;
+    left: 1px; }
+  .button .button-text:nth-child(2), .home-letter-link .button-text:nth-child(2) {
+    margin-left: 0.5rem; }
+  .button.header-button, .header-button.home-letter-link {
+    border: 0;
+    box-shadow: 0 0 0 0;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .button.header-button:hover, .header-button.home-letter-link:hover {
+      background: white; }
 
 .row [class^="col"] {
   margin: 0 2%; }
@@ -188,19 +207,19 @@
   .hidden-sm {
     display: block; } }
 
-.basic-box, .home-letter, .button, .injections-container, .input, .letter-container {
+.basic-box, .button, .home-letter-link, .home-letter, .injections-container, .input, .letter-container {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   background: white; }
 
-.shadow-main, .nav, .home-letter, .button, .injections-container, .letter-container {
+.shadow-main, .button, .home-letter-link, .nav, .home-letter, .injections-container, .letter-container {
   box-shadow: 1px 2px 4px #CCC; }
 
-.shadow-low, .button:active {
+.shadow-low, .button:active, .home-letter-link:active {
   box-shadow: 0 1px 4px #CCC; }
 
-.remove-focus-outline, .button:focus, .letter-title, .letter-textarea {
+.remove-focus-outline, .button:focus, .home-letter-link:focus, .letter-title, .letter-textarea {
   outline: none; }
 
 .margin-bottom-common, .nav, .letter-title, .injections-container, .actionBar-container, .letter-container {
@@ -220,6 +239,25 @@
 
 .t-blue {
   color: #4285F4; }
+
+.button, .home-letter-link {
+  font-size: 1.25rem;
+  cursor: pointer;
+  position: relative; }
+  .button:hover, .home-letter-link:hover {
+    background: #EEE; }
+  .button:active, .home-letter-link:active {
+    top: 1px;
+    left: 1px; }
+  .button .button-text:nth-child(2), .home-letter-link .button-text:nth-child(2) {
+    margin-left: 0.5rem; }
+  .button.header-button, .header-button.home-letter-link {
+    border: 0;
+    box-shadow: 0 0 0 0;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .button.header-button:hover, .header-button.home-letter-link:hover {
+      background: white; }
 
 .row [class^="col"] {
   margin: 0 2%; }
@@ -313,34 +351,15 @@ body {
   .logo.title {
     font-size: 1.25rem; }
 
-.button {
-  font-size: 1.25rem;
-  cursor: pointer;
-  position: relative; }
-  .button:hover {
-    background: #EEE; }
-  .button:active {
-    top: 1px;
-    left: 1px; }
-  .button .button-text:nth-child(2) {
-    margin-left: 0.5rem; }
-  .button.header-button {
-    border: 0;
-    box-shadow: 0 0 0 0;
-    padding-left: 2rem;
-    padding-right: 2rem; }
-    .button.header-button:hover {
-      background: white; }
-
-.button-group .button {
+.button-group .button, .button-group .home-letter-link {
   border-radius: 0;
   border-right: 1px solid #CCC; }
 
-.button-group .button:first-child {
+.button-group .button:first-child, .button-group .home-letter-link:first-child {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
-.button-group .button:last-child {
+.button-group .button:last-child, .button-group .home-letter-link:last-child {
   border-right: 0;
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }

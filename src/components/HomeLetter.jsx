@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '.';
 
-export const HomeLetter = () => (
+export const HomeLetter = ({ user }) => (
   <div className="home-letter">
     <div className="home-letter-top">
       <p className="home-letter-prefix-container title">
@@ -13,8 +15,12 @@ export const HomeLetter = () => (
       <h1 className="home-letter-title title">letter.tools</h1>
     </div>
     <div className="home-letter-links">
-      <div className="home-letter-link">Start fresh</div>
-      <div className="home-letter-link">Continue</div>
+      <Link className="home-letter-link" to="letter">Start fresh</Link>
+      {
+        user ?
+        <Link className="home-letter-link" to="list">Continue</Link> :
+        <Button className="home-letter-link" text="Continue" disabled />
+      }
     </div>
   </div>
 )

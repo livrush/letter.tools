@@ -26,38 +26,6 @@ body {
   }
 }
 
-.button {
-  @extend .basic-box;
-  @extend .shadow-main;
-  font-size: 1.25rem;
-  cursor: pointer;
-  position: relative;
-
-  &:hover {
-    background: #EEE;
-  }
-  &:active {
-    @extend .shadow-low;
-    top: 1px;
-    left: 1px;
-  }
-  &:focus {
-    @extend .remove-focus-outline;
-  }
-  .button-text:nth-child(2) {
-    margin-left: 0.5rem;
-  }
-  &.header-button {
-    border: 0;
-    box-shadow: 0 0 0 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    &:hover {
-      background: white;
-    }
-  }
-}
-
 .button-group {
   .button {
     border-radius: 0;
