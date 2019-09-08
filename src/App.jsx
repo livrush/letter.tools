@@ -1,7 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { HomePage, LetterPage, ListPage, } from './pages';
 import { Header } from './components';
+
+function mapStateToProps(state) {
+  console.log(state);
+  return {
+    letter: state.letter,
+    variables: state.variables,
+  };
+}
 
 function App() {
   return (
@@ -10,11 +19,20 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/letter" component={LetterPage} />
+          <Route path="/letter" component={connect(mapStateToProps)(LetterPage)} />
           <Route path="/list" component={ListPage} />
         </Switch>
       </Router>
-      <footer className="footer">Built by Olivia Sabo-Rush</footer>
+      <footer className="footer">
+        Built by&nbsp;
+        <a
+          href="http://pafiu.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Olivia Sabo-Rush
+        </a>
+      </footer>
     </div>
   );
 }

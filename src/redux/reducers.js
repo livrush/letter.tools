@@ -6,6 +6,7 @@ import {
   EDIT_LETTER_CONTENT,
   VIEW_LETTER_CONTENT,
 } from './constants';
+import instructions from '../lib/instructions';
 
 // ! ////////////////////////////
 // ! Variables //////////////////
@@ -45,7 +46,11 @@ function variablesReducer(variables = {}, action) {
 //   edit: '',
 // }
 
-function letterReducer(letter = {}, action) {
+function letterReducer(letter = {
+  edit: true,
+  title: 'Untitled Letter',
+  content: instructions,
+}, action) {
   switch(action.type) {
     case UPDATE_LETTER_TITLE:
       return { ...letter, title: action.payload.newTitle };

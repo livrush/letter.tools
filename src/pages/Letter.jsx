@@ -1,15 +1,14 @@
 import React from 'react';
 import { ActionBar, VariableColumn, Letter } from '../components';
-import instructions from '../lib/instructions';
 
-const LetterPage = () => (
+const LetterPage = ({ letter }) => (
   <div className="container">
     <div className="row">
       <div className="col-4">
         <h2
           className="letter-title"
           // contentEditable="true"
-        >Title</h2>
+        >{letter.title}</h2>
         <VariableColumn
           config={{
             Salutation: '',
@@ -22,8 +21,8 @@ const LetterPage = () => (
       <div className="col-8">
         <ActionBar />
         <Letter
-          edit={false}
-          letterText={instructions}
+          edit={letter.edit}
+          letterText={letter.content}
         />
       </div>
     </div>
