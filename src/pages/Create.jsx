@@ -18,6 +18,7 @@ const CreatePage = ({ letter, variables }) => (
         <Letter
           edit={letter.edit}
           letterText={letter.content}
+          variables={variables}
         />
       </div>
     </div>

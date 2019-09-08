@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { replaceVariables } from '../lib';
 
 class Letter extends React.Component {
   static defaultProps = {
@@ -18,17 +19,21 @@ class Letter extends React.Component {
     const {
       edit,
       letterText,
+      variables,
     } = this.props;
 
     const editing = (
-      <textarea className="letter-textarea"
+      <textarea
+        className="letter-textarea"
         // value={letterText}
       />
     );
 
+    const adjustedLetterText = replaceVariables(letterText, variables);
+
     const displaying = (
       <div className="letter-text">
-        {letterText.split('\n').map((line, i) => <p key={line.slice(0, 5) || `Empty-${i}`}>{line}</p>)}
+        {adjustedLetterText.split('\n').map((line, i) => <p key={line.slice(0, 5) || `Empty-${i}`}>{line}</p>)}
       </div>
     );
 
