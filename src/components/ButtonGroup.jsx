@@ -13,10 +13,12 @@ const ButtonGroup = ({ config }) => (
 );
 
 ButtonGroup.propTypes = {
-  config: PropTypes.arrayOf(PropTypes.shape({
-    icon: PropTypes.node,
-    text: PropTypes.string,
-  })).isRequired,
+  config: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.node,
+      text: PropTypes.string,
+    }).isRequired
+  ).isRequired,
 };
 
 export { ButtonGroup };

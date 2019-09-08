@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionBar, InjectionColumn, Letter } from '../components';
+import { ActionBar, VariableColumn, Letter } from '../components';
 import instructions from '../lib/instructions';
 
 const LetterPage = () => (
@@ -10,7 +10,7 @@ const LetterPage = () => (
           class="letter-title"
           contenteditable="true"
         >Title</h2>
-        <InjectionColumn
+        <VariableColumn
           config={[
             { content: 'Salutation' },
             { content: 'Company' },

@@ -11,7 +11,7 @@ import {
   ButtonGroup,
   Header,
   HomeLetter,
-  InjectionColumn,
+  VariableColumn,
   Input,
 } from '../components';
 
@@ -33,7 +33,7 @@ storiesOf('Components', module)
   .addDecorator(centered)
   .add('Header', () => <Header />)
   .add('HomeLetter', () => <HomeLetter />)
-  .add('Injection Column', () => <InjectionColumn config={[
+  .add('Injection Column', () => <VariableColumn config={[
     { content: 'Salutation' },
     { content: 'Company' },
     { content: 'Position' },
