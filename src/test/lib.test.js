@@ -38,7 +38,7 @@ describe('replaceVariables', function () {
     const verb = faker.hacker.verb();
     const variables = { verb };
     const result = replaceVariables(string, variables);
-    expect(result).to.equal(`We don\'t ${verb} together`);
+    expect(result).to.equal(`We don't ${verb} together`);
   });
 
   it('should replace one value regardless of whitespace', function () {
@@ -46,7 +46,7 @@ describe('replaceVariables', function () {
     const verb = faker.hacker.verb();
     const variables = { verb };
     const result = replaceVariables(string, variables);
-    expect(result).to.equal(`We don\'t ${verb} together`);
+    expect(result).to.equal(`We don't ${verb} together`);
   });
 
   it('should replace multiple values', function () {
