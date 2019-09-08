@@ -5,8 +5,8 @@ import { Button } from '.';
 const ButtonGroup = ({ config }) => (
   <div className="button-group">
     {
-      config.map(({ icon, text, ...rest }) => (
-        <Button key={icon.toString() + text} icon={icon} text={text} {...rest} />
+      config.map(({ icon, text, ...rest }, i) => (
+        <Button key={icon.iconName + text} icon={icon} text={text} {...rest} />
       ))
     }
   </div>
@@ -15,7 +15,7 @@ const ButtonGroup = ({ config }) => (
 ButtonGroup.propTypes = {
   config: PropTypes.arrayOf(
     PropTypes.shape({
-      icon: PropTypes.node,
+      icon: PropTypes.object,
       text: PropTypes.string,
     }).isRequired
   ).isRequired,
