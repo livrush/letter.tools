@@ -1,6 +1,5 @@
 import { expect } from 'chai';
 import faker from 'faker';
-// import instructions from '../lib/instructions';
 import {
   instructions,
   readVariables,
