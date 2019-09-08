@@ -1,5 +1,6 @@
 import React from 'react';
+import { HomeLetter } from '../components';
 
-export const HomePage = () => {
-  return (<div>Home</div>)
-}
+export const HomePage = () => (
+  <div className="homePage-container"><HomeLetter /></div>
+);
