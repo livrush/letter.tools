@@ -7,16 +7,16 @@ const LetterPage = () => (
     <div className="row">
       <div className="col-4">
         <h2
-          class="letter-title"
-          contenteditable="true"
+          className="letter-title"
+          // contentEditable="true"
         >Title</h2>
         <VariableColumn
-          config={[
-            { content: 'Salutation' },
-            { content: 'Company' },
-            { content: 'Position' },
-            { content: 'Skill 1' },
-          ]}
+          config={{
+            Salutation: '',
+            Company: '',
+            Position: '',
+            Skill: '',
+          }}
         />
       </div>
       <div className="col-8">
