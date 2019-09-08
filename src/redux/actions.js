@@ -7,7 +7,6 @@ import {
 } from './constants';
 
 function test(input) {
-  console.warn('Test fired');
   return {
     type: 'TEST',
     payload: input,
@@ -19,7 +18,6 @@ function test(input) {
 // ! ////////////////////////////
 
 function updateVariable(updatedVariable) {
-  console.log(updatedVariable);
   return {
     type: UPDATE_VARIABLE,
     payload: updatedVariable,

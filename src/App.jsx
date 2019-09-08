@@ -5,7 +5,6 @@ import { HomePage, CreatePage, ListPage, } from './pages';
 import { Header } from './components';
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     letter: state.letter,
     variables: state.variables,
