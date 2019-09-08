@@ -8,6 +8,15 @@ import {
 } from './constants';
 import { instructions } from '../lib';
 
+function test(state = 'TEST VALUE', action) {
+  switch(action.type) {
+    case 'TEST':
+      return action.payload;
+    default:
+      return state;
+  }
+}
+
 // ! ////////////////////////////
 // ! Variables //////////////////
 // ! ////////////////////////////
@@ -33,7 +42,7 @@ function variablesReducer(variables = {
           return result;
         }, {});
     case UPDATE_VARIABLE:
-      return [ ...variables, ...action.payload ];
+      return { ...variables, ...action.payload };
     default:
       return variables;
   }
@@ -72,6 +81,7 @@ function letterReducer(letter = {
 const reducers = combineReducers({
   variables: variablesReducer,
   letter: letterReducer,
+  test,
 });
 
 export default reducers;

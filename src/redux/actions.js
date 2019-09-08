@@ -6,11 +6,20 @@ import {
   VIEW_LETTER_CONTENT,
 } from './constants';
 
+function test(input) {
+  console.warn('Test fired');
+  return {
+    type: 'TEST',
+    payload: input,
+  }
+}
+
 // ! ////////////////////////////
 // ! Variables //////////////////
 // ! ////////////////////////////
 
 function updateVariable(updatedVariable) {
+  console.log(updatedVariable);
   return {
     type: UPDATE_VARIABLE,
     payload: updatedVariable,
@@ -54,6 +63,7 @@ function viewLetterContent() {
 }
 
 export {
+  test,
   updateVariable,
   updateLetterTitle,
   updateLetterContent,
