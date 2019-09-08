@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux'
 import {
   UPDATE_VARIABLE,
   UPDATE_LETTER_TITLE,
@@ -16,13 +17,16 @@ import {
 //   ...
 // },
 
-function variableReducer(variables, action) {
+function variablesReducer(variables = {}, action) {
   switch(action.type) {
     case UPDATE_LETTER_CONTENT:
-      return action.payload.reduce((result, variableName) => {
-        result[variableName] = variables[variableName] || null;
-        return result;
-      }, {});
+      // todo: make sure this is actually getting an array of names,
+      // todo: otherwise it will need to change
+      return action.payload.newVariableNames
+        .reduce((result, variableName) => {
+          result[variableName] = variables[variableName] || null;
+          return result;
+        }, {});
     case UPDATE_VARIABLE:
       return [ ...variables, ...action.payload ];
     default:
@@ -41,12 +45,12 @@ function variableReducer(variables, action) {
 //   edit: '',
 // }
 
-function letterReducer(letter, action) {
+function letterReducer(letter = {}, action) {
   switch(action.type) {
     case UPDATE_LETTER_TITLE:
-      return { ...letter, title: action.payload };
+      return { ...letter, title: action.payload.newTitle };
     case UPDATE_LETTER_CONTENT:
-      return { ...letter, content: action.payload };
+      return { ...letter, content: action.payload.newContent };
     case EDIT_LETTER_CONTENT:
       return { ...letter, edit: true };
     case VIEW_LETTER_CONTENT:
@@ -56,7 +60,14 @@ function letterReducer(letter, action) {
   }
 }
 
-export {
-  variableReducer,
-  letterReducer,
-};
+const reducers = combineReducers({
+  variables: variablesReducer,
+  letter: letterReducer,
+});
+
+// export {
+//   variablesReducer,
+//   letterReducer,
+// };
+
+export default reducers;
