@@ -22,7 +22,7 @@ function App() {
         </Switch>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/letter" component={connect(mapStateToProps)(LetterPage)} />
+          <Route path="/create" component={connect(mapStateToProps)(LetterPage)} />
           <Route path="/list" component={ListPage} />
         </Switch>
       </Router>

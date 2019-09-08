@@ -15,7 +15,7 @@ export const HomeLetter = ({ user }) => (
       <h1 className="home-letter-title title">letter.tools</h1>
     </div>
     <div className="home-letter-links">
-      <Link className="home-letter-link" to="letter">Start fresh</Link>
+      <Link className="home-letter-link" to="create">Start fresh</Link>
       {
         user ?
         <Link className="home-letter-link" to="list">Continue</Link> :

@@ -10,7 +10,7 @@ export const Header = () => (
         </div>
       </Link>
       <div className="links">
-        <Link to="letter">Letter</Link>
+        <Link to="create">Letter</Link>
         <Link to="list">List</Link>
       </div>
     </div>
