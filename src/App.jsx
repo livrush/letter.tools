@@ -16,7 +16,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Switch>
+          <Route path="/" exact component={null} />
+          <Route component={Header} />
+        </Switch>
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/letter" component={connect(mapStateToProps)(LetterPage)} />
