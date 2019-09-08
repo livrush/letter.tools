@@ -6,7 +6,7 @@ import {
   EDIT_LETTER_CONTENT,
   VIEW_LETTER_CONTENT,
 } from './constants';
-import instructions from '../lib/instructions';
+import { instructions } from '../lib';
 
 // ! ////////////////////////////
 // ! Variables //////////////////
