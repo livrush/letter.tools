@@ -12,8 +12,8 @@ const VariableColumn = ({ config }) => {
   }
 
   return (
-    <div className="injections-container">
-      <h2 className="injections-title">Injections</h2>
+    <div className="variables-container">
+      <h3 className="variables-title">Variables</h3>
       { InputComponents }
     </div>
   );

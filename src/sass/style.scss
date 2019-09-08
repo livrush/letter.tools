@@ -50,12 +50,16 @@ body {
   margin-top: 0;
 }
 
-.injections-container {
+.variables-container {
   @extend .basic-box;
   @extend .shadow-main;
   @extend .margin-bottom-common;
   display: flex;
   flex-direction: column;
+}
+
+.variables-title {
+  margin-top: 0;
 }
 
 .input-container {
@@ -72,7 +76,7 @@ body {
 .input {
   @extend .basic-box;
   font-size: 1rem;
-  border: 1px solid grey;
+  border: 1px solid $grey;
 }
 
 .actionBar-container {

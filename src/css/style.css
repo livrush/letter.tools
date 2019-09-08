@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
-.basic-box, .button, .home-letter-link, .home-letter, .injections-container, .input, .letter-container {
+.basic-box, .button, .home-letter-link, .home-letter, .variables-container, .input, .letter-container {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   background: white; }
 
-.shadow-main, .button, .home-letter-link, .nav, .home-letter, .injections-container, .letter-container {
+.shadow-main, .button, .home-letter-link, .nav, .home-letter, .variables-container, .letter-container {
   box-shadow: 1px 2px 4px #CCC; }
 
 .shadow-low, .button:active, .home-letter-link:active {
@@ -14,7 +14,7 @@
 .remove-focus-outline, .button:focus, .home-letter-link:focus, .letter-title, .letter-textarea {
   outline: none; }
 
-.margin-bottom-common, .nav, .letter-title, .injections-container, .actionBar-container, .letter-container {
+.margin-bottom-common, .nav, .letter-title, .variables-container, .actionBar-container, .letter-container {
   margin-bottom: 1.25rem; }
 
 .t-black {
@@ -219,13 +219,13 @@
   .hidden-sm {
     display: block; } }
 
-.basic-box, .button, .home-letter-link, .home-letter, .injections-container, .input, .letter-container {
+.basic-box, .button, .home-letter-link, .home-letter, .variables-container, .input, .letter-container {
   border: 0;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   background: white; }
 
-.shadow-main, .button, .home-letter-link, .nav, .home-letter, .injections-container, .letter-container {
+.shadow-main, .button, .home-letter-link, .nav, .home-letter, .variables-container, .letter-container {
   box-shadow: 1px 2px 4px #CCC; }
 
 .shadow-low, .button:active, .home-letter-link:active {
@@ -234,7 +234,7 @@
 .remove-focus-outline, .button:focus, .home-letter-link:focus, .letter-title, .letter-textarea {
   outline: none; }
 
-.margin-bottom-common, .nav, .letter-title, .injections-container, .actionBar-container, .letter-container {
+.margin-bottom-common, .nav, .letter-title, .variables-container, .actionBar-container, .letter-container {
   margin-bottom: 1.25rem; }
 
 .t-black {
@@ -395,9 +395,12 @@ body {
   line-height: 2.5rem;
   margin-top: 0; }
 
-.injections-container {
+.variables-container {
   display: flex;
   flex-direction: column; }
+
+.variables-title {
+  margin-top: 0; }
 
 .input-container {
   display: flex;
@@ -410,7 +413,7 @@ body {
 
 .input {
   font-size: 1rem;
-  border: 1px solid grey; }
+  border: 1px solid #CCC; }
 
 .actionBar-container {
   display: flex;

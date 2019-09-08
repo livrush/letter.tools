@@ -33,7 +33,7 @@ storiesOf('Components', module)
   .addDecorator(centered)
   .add('Header', () => <Header />)
   .add('HomeLetter', () => <HomeLetter />)
-  .add('Injection Column', () => <VariableColumn config={[
+  .add('Variable Column', () => <VariableColumn config={[
     { content: 'Salutation' },
     { content: 'Company' },
     { content: 'Position' },
