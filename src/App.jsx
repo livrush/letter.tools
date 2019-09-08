@@ -29,6 +29,7 @@ function App() {
       <footer className="footer">
         Built by&nbsp;
         <a
+          className="link"
           href="http://pafiu.me"
           target="_blank"
           rel="noopener noreferrer"

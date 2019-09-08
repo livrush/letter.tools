@@ -33,8 +33,9 @@
   color: #4285F4; }
 
 .button, .home-letter-link {
-  font-size: 1.25rem;
   cursor: pointer;
+  font-size: 1.25rem;
+  height: 2.5rem;
   position: relative; }
   .button:hover, .home-letter-link:hover {
     background: #EEE; }
@@ -50,6 +51,16 @@
     padding-right: 2rem; }
     .button.header-button:hover, .header-button.home-letter-link:hover {
       background: white; }
+  .button[disabled]:hover, .home-letter-link[disabled]:hover {
+    background: white;
+    color: #CCC; }
+
+.link, .home-letter-link {
+  color: #CCC;
+  text-decoration: none; }
+  .link:hover, .home-letter-link:hover {
+    color: black;
+    text-decoration: underline; }
 
 .row [class^="col"] {
   margin: 0 2%; }
@@ -93,11 +104,12 @@
   width: 100vw; }
 
 .header {
-  height: 2.5rem;
+  align-items: center;
   display: flex;
   flex-direction: row;
+  height: 2.5rem;
   justify-content: space-between;
-  align-items: center; }
+  padding: 0 2%; }
 
 .footer {
   padding: 3rem 1rem;
@@ -241,8 +253,9 @@
   color: #4285F4; }
 
 .button, .home-letter-link {
-  font-size: 1.25rem;
   cursor: pointer;
+  font-size: 1.25rem;
+  height: 2.5rem;
   position: relative; }
   .button:hover, .home-letter-link:hover {
     background: #EEE; }
@@ -258,6 +271,16 @@
     padding-right: 2rem; }
     .button.header-button:hover, .header-button.home-letter-link:hover {
       background: white; }
+  .button[disabled]:hover, .home-letter-link[disabled]:hover {
+    background: white;
+    color: #CCC; }
+
+.link, .home-letter-link {
+  color: #CCC;
+  text-decoration: none; }
+  .link:hover, .home-letter-link:hover {
+    color: black;
+    text-decoration: underline; }
 
 .row [class^="col"] {
   margin: 0 2%; }
@@ -336,6 +359,9 @@
   justify-content: space-around;
   width: 100%; }
 
+.home-letter-link:hover {
+  text-decoration: none; }
+
 * {
   box-sizing: border-box; }
 
@@ -366,7 +392,7 @@ body {
 
 .letter-title {
   font-size: 1.25rem;
-  line-height: 2.875rem;
+  line-height: 2.5rem;
   margin-top: 0; }
 
 .injections-container {

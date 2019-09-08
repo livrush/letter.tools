@@ -55,4 +55,8 @@
 
 .home-letter-link {
   @extend .button;
+  @extend .link;
+  &:hover {
+    text-decoration: none;
+  }
 }
