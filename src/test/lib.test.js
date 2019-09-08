@@ -72,4 +72,13 @@ describe('replaceVariables', function () {
     const result = replaceVariables(string, variables);
     expect(result).to.equal(`I ${verb} you and you ${verb} me`);
   });
+
+  it('should replace multiple values regardless of whitespace', function () {
+    const string = 'I {{verb1}} you and you {{verb2}} me';
+    const verb1 = faker.hacker.verb();
+    const verb2 = faker.hacker.verb();
+    const variables = { verb1, verb2 };
+    const result = replaceVariables(string, variables);
+    expect(result).to.equal(`I ${verb1} you and you ${verb2} me`);
+  });
 });
