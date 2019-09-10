@@ -19,13 +19,15 @@ class Letter extends React.Component {
     const {
       edit,
       letterText,
+      updateLetterContent,
       variables,
     } = this.props;
 
     const editing = (
       <textarea
         className="letter-textarea"
-        // value={letterText}
+        value={letterText}
+        onChange={({ target }) => updateLetterContent({ newContent: target.value })}
       />
     );
 

@@ -9,12 +9,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ButtonGroup } from '.';
 
-export const ActionBar = () => (
+export const ActionBar = ({ editLetterContent, viewLetterContent }) => (
   <div className="actionBar-container">
     <ButtonGroup
       config={[
-        { icon: faEdit },
-        { icon: faEye },
+        { icon: faEdit, onClick:() => editLetterContent() },
+        { icon: faEye, onClick: () => viewLetterContent() },
       ]}
     />
     <ButtonGroup

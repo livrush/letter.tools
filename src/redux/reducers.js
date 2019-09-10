@@ -6,7 +6,7 @@ import {
   EDIT_LETTER_CONTENT,
   VIEW_LETTER_CONTENT,
 } from './constants';
-import { instructions } from '../lib';
+import { instructions, readVariables } from '../lib';
 
 function test(state = 'TEST VALUE', action) {
   switch(action.type) {
@@ -34,9 +34,7 @@ function variablesReducer(variables = {
 }, action) {
   switch(action.type) {
     case UPDATE_LETTER_CONTENT:
-      // todo: make sure this is actually getting an array of names,
-      // todo: otherwise it will need to change
-      return action.payload.newVariableNames
+      return readVariables(action.payload.newContent)
         .reduce((result, variableName) => {
           result[variableName] = variables[variableName] || null;
           return result;
@@ -60,7 +58,7 @@ function variablesReducer(variables = {
 // }
 
 function letterReducer(letter = {
-  edit: false,
+  edit: true,
   title: 'Untitled Letter',
   content: instructions,
 }, action) {
