@@ -1,44 +1,10 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { ActionBar, VariableColumn, Letter } from '../components';
 import { instructions } from '../lib';
 import {
-  editLetterContent,
-  updateLetterContent,
-  viewLetterContent
-} from '../redux';
-
-// ! ConnectedVariableColumn
-
-const mapStateToVariableColumnProps = state => ({
-  variableConfig: state.variables,
-});
-
-// ! ConnectedActionBar
-
-const mapStateToActionBarProps = state => ({
-  edit: state.letter.edit,
-});
-
-const mapDispatchToActionBarProps = dispatch => (
-  bindActionCreators({ editLetterContent, viewLetterContent }, dispatch)
-);
-
-// ! ConnectedLetter
-
-const mapStateToLetterProps = state => ({
-  edit: state.letter.edit,
-  letterText: state.letter.content,
-  variables: state.variables,
-});
-
-const mapDispatchToLetterProps = dispatch =>
-  bindActionCreators({ updateLetterContent }, dispatch);
-
-const ConnectedActionBar = connect(mapStateToActionBarProps, mapDispatchToActionBarProps)(ActionBar);
-const ConnectedLetter = connect(mapStateToLetterProps, mapDispatchToLetterProps)(Letter);
-const ConnectedVariableColumn = connect(mapStateToVariableColumnProps)(VariableColumn);
+  ConnectedActionBar,
+  ConnectedLetter,
+  ConnectedVariableColumn,
+} from './Create-containers';
 
 class CreatePage extends React.Component {
   constructor(props) {
