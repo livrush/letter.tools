@@ -9,6 +9,7 @@ import {
 class CreatePage extends React.Component {
   constructor(props) {
     super(props);
+    document.title = 'letter tools \ud83d\udcdd';
     this.props.updateLetterContent({ newContent: instructions });
   }
 
