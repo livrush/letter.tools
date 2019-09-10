@@ -9,7 +9,6 @@ import { Header } from './components';
 const mapStateToProps = (state) => {
   return {
     letter: state.letter,
-    variables: state.variables,
   };
 }
 
