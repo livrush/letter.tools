@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+  <title>Artboard</title>
+  <desc>Created with Sketch.</desc>
+  <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Group" transform="translate(21.666667, 21.666667)">
+      <g id="Envelope" class="bg-icon"
+        transform="translate(18.333333, 18.333333) rotate(-30.000000) translate(-18.333333, -18.333333) translate(5.000000, 5.000000)">
+        <g id="24px-(1)">
+          <path
+            d="M22.5,4.5 L4.5,4.5 C3.2625,4.5 2.26125,5.5125 2.26125,6.75 L2.25,20.25 C2.25,21.4875 3.2625,22.5 4.5,22.5 L22.5,22.5 C23.7375,22.5 24.75,21.4875 24.75,20.25 L24.75,6.75 C24.75,5.5125 23.7375,4.5 22.5,4.5 Z M22.5,9 L13.5,14.625 L4.5,9 L4.5,6.75 L13.5,12.375 L22.5,6.75 L22.5,9 Z"
+            id="Shape" fill="#EEEEEE" fill-rule="nonzero"></path>
+          <polygon id="Path" points="0 0 27 0 27 27 0 27"></polygon>
+        </g>
+      </g>
+      <g id="Page" class="bg-icon"
+        transform="translate(98.333333, 98.333333) rotate(30.000000) translate(-98.333333, -98.333333) translate(85.000000, 85.000000)">
+        <g id="24px">
+          <polygon id="Path" points="0 0 27 0 27 27 0 27"></polygon>
+          <path
+            d="M15.75,2.25 L6.75,2.25 C5.5125,2.25 4.51125,3.2625 4.51125,4.5 L4.5,22.5 C4.5,23.7375 5.50125,24.75 6.73875,24.75 L20.25,24.75 C21.4875,24.75 22.5,23.7375 22.5,22.5 L22.5,9 L15.75,2.25 Z M18,20.25 L9,20.25 L9,18 L18,18 L18,20.25 Z M18,15.75 L9,15.75 L9,13.5 L18,13.5 L18,15.75 Z M14.625,10.125 L14.625,3.9375 L20.8125,10.125 L14.625,10.125 Z"
+            id="Shape" fill="#EEEEEE" fill-rule="nonzero"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

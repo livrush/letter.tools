@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap");
 .basic-box, .button, .home-letter-link, .home-letter, .variables-container, .input, .letter-container {
   border: 0;
   border-radius: 0.25rem;
@@ -366,14 +367,16 @@
   box-sizing: border-box; }
 
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px; }
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-image: url("/img/bg.svg");
+  background-size: 10rem; }
 
 body {
   margin: 0; }
 
 .logo {
-  font-family: 'Work Sans', sans-serif; }
+  font-family: "Work Sans", sans-serif; }
   .logo.title {
     font-size: 1.25rem; }
 
@@ -424,8 +427,19 @@ body {
 .letter-container {
   padding: 3rem 1rem; }
 
+.letter-text {
+  border: 1px solid white;
+  padding: 4px;
+  line-height: 1.5rem; }
+  .letter-text p {
+    margin-top: 0; }
+
 .letter-textarea {
-  border: 0;
-  width: 100%;
+  line-height: 1.5rem;
+  padding: 4px;
+  border: 1px solid #CCC;
+  font-size: 1rem;
   height: 100%;
-  font-size: 1rem; }
+  resize: none;
+  width: 100%;
+  font-family: "Roboto", sans-serif; }
