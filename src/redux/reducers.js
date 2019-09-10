@@ -36,7 +36,7 @@ function variablesReducer(variables = {
     case UPDATE_LETTER_CONTENT:
       return readVariables(action.payload.newContent)
         .reduce((result, variableName) => {
-          result[variableName] = variables[variableName] || null;
+          result[variableName] = variables[variableName] || '';
           return result;
         }, {});
     case UPDATE_VARIABLE:
