@@ -347,9 +347,11 @@
   text-align: right; }
 
 .home-letter-prefix {
+  font-family: "Work Sans", sans-serif;
   font-size: 2rem; }
 
 .home-letter-title {
+  font-family: "Work Sans", sans-serif;
   position: absolute;
   margin: 0;
   left: 51%; }

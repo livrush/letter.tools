@@ -36,10 +36,12 @@
 }
 
 .home-letter-prefix {
+  font-family: $title-font;
   font-size: 2rem;
 }
 
 .home-letter-title {
+  font-family: $title-font;
   position: absolute;
   margin: 0;
   left: 51%;
