@@ -31,7 +31,8 @@ const mapDispatchToLetterProps = dispatch =>
 const ConnectedLetter = connect(mapStateToLetterProps, mapDispatchToLetterProps)(Letter);
 
 class CreatePage extends React.Component {
-  componentWillMount() {
+  constructor(props) {
+    super(props);
     this.props.updateLetterContent({ newContent: instructions });
   }
 
