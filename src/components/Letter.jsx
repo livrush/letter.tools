@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { replaceVariables } from '../lib';
+import { TextArea } from '.';
 
 class Letter extends React.Component {
   static defaultProps = {
     edit: true,
-  }
-
-  componentDidMount() {
-    const textarea = document
-      .getElementsByClassName('letter-textarea')[0];
-    textarea && textarea.addEventListener('keyup', function (event) {
-      event.target.style.height = event.target.scrollHeight + 'px';
-    }, false);
   }
 
   render() {
@@ -23,13 +16,7 @@ class Letter extends React.Component {
       variables,
     } = this.props;
 
-    const editing = (
-      <textarea
-        className="letter-textarea"
-        value={letterText}
-        onChange={({ target }) => updateLetterContent({ newContent: target.value })}
-      />
-    );
+    const editing = (<TextArea text={letterText} onChange={updateLetterContent} />)
 
     const adjustedLetterText = replaceVariables(letterText, variables);
 
