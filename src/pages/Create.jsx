@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ActionBar, VariableColumn, Letter } from '../components';
+import { instructions } from '../lib';
 import {
   editLetterContent,
   updateLetterContent,
@@ -29,23 +30,33 @@ const mapDispatchToLetterProps = dispatch =>
 
 const ConnectedLetter = connect(mapStateToLetterProps, mapDispatchToLetterProps)(Letter);
 
-const CreatePage = ({ letter, variables }) => (
-  <div className="container">
-    <div className="row">
-      <div className="col-4">
-        <h2 className="letter-title">
-          {letter.title}
-        </h2>
-        <VariableColumn config={variables} />
-      </div>
-      <div className="col-8">
-        <ConnectedActionBar />
-        <ConnectedLetter />
-      </div>
-    </div>
-  </div>
-);
+class CreatePage extends React.Component {
+  componentWillMount() {
+    this.props.updateLetterContent({ newContent: instructions });
+  }
 
+  render() {
+    const {
+      letter,
+      variables
+    } = this.props;
+
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <h2 className="letter-title">{letter.title}</h2>
+            <VariableColumn config={variables} />
+          </div>
+          <div className="col-8">
+            <ConnectedActionBar />
+            <ConnectedLetter />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 CreatePage.propTypes = {};
 
 export { CreatePage };

@@ -1,15 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { updateLetterContent } from './redux';
 import { HomePage, CreatePage, ListPage, } from './pages';
 import { Header } from './components';
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     letter: state.letter,
     variables: state.variables,
   };
 }
+
+const mapDispatchToProps = (dispatch) => (
+  bindActionCreators({ updateLetterContent }, dispatch)
+);
 
 function App() {
   return (
@@ -21,7 +27,7 @@ function App() {
         </Switch>
         <Switch>
           <Route path="/" exact component={HomePage} />
-          <Route path="/create" component={connect(mapStateToProps)(CreatePage)} />
+          <Route path="/create" component={connect(mapStateToProps, mapDispatchToProps)(CreatePage)} />
           <Route path="/list" component={ListPage} />
         </Switch>
       </Router>
