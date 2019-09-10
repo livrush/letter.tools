@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 class TextArea extends React.Component {
   componentDidMount() {
     const textarea = document.getElementsByClassName('letter-textarea')[0];
-    if (textarea) textarea.style.height = textarea.scrollHeight + 'px';
+    if (textarea) textarea.style.height = `${textarea.scrollHeight + 2}px`;
   }
 
   componentDidUpdate() {
     const textarea = document.getElementsByClassName('letter-textarea')[0];
-    if (textarea) textarea.style.height = textarea.scrollHeight + 'px';
+    if (textarea) textarea.style.height = `${textarea.scrollHeight + 2}px`;
   }
 
   render() {
