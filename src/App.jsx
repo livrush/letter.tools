@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { updateLetterContent } from './redux';
-import { HomePage, CreatePage, ListPage, } from './pages';
 import { Header } from './components';
+import {
+  HomePage,
+  CreatePage,
+  ListPage,
+  OopsPage
+} from './pages';
 
 const mapStateToProps = (state) => {
   return {
@@ -28,6 +33,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/create" component={connect(mapStateToProps, mapDispatchToProps)(CreatePage)} />
           <Route path="/list" component={ListPage} />
+          <Route component={OopsPage} />
         </Switch>
       </Router>
       <footer className="footer">

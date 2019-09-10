@@ -100,6 +100,23 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite; }
 
+@keyframes blink {
+  1% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  51% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+.blink {
+  animation-name: blink;
+  animation-timing-function: step-end;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
 .nav {
   background: white;
   width: 100vw; }
@@ -320,6 +337,23 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite; }
 
+@keyframes blink {
+  1% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  51% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+.blink {
+  animation-name: blink;
+  animation-timing-function: step-end;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
 .homePage-container {
   display: flex;
   justify-content: center;
@@ -369,6 +403,7 @@
   box-sizing: border-box; }
 
 html {
+  color: #333;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-image: url("/img/bg.svg");
@@ -376,6 +411,21 @@ html {
 
 body {
   margin: 0; }
+
+.oops-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0 2rem; }
+
+.oops-envelope-container {
+  position: relative;
+  width: 16rem; }
+
+.envelope-shock-lines {
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .button-group .button, .button-group .home-letter-link {
   border-radius: 0;
