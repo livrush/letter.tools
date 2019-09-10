@@ -9,10 +9,10 @@ export const Header = () => (
           letter.tools
         </div>
       </Link>
-      <div className="links">
+      {/* <div className="links">
         <Link to="create" className="link">Letter</Link>
         <Link to="list" className="link">List</Link>
-      </div>
+      </div> */}
     </div>
   </nav>
 );
