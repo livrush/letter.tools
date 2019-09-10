@@ -8,11 +8,15 @@ import {
   viewLetterContent
 } from '../redux';
 
+const mapStateToActionBarProps = state => ({
+  edit: state.letter.edit,
+});
+
 const mapDispatchToActionBarProps = dispatch => (
   bindActionCreators({ editLetterContent, viewLetterContent }, dispatch)
 );
 
-const ConnectedActionBar = connect(null, mapDispatchToActionBarProps)(ActionBar);
+const ConnectedActionBar = connect(mapStateToActionBarProps, mapDispatchToActionBarProps)(ActionBar);
 
 const mapStateToLetterProps = state => ({
   edit: state.letter.edit,
@@ -29,21 +33,14 @@ const CreatePage = ({ letter, variables }) => (
   <div className="container">
     <div className="row">
       <div className="col-4">
-        <h2
-          className="letter-title"
-          // contentEditable="true"
-        >
+        <h2 className="letter-title">
           {letter.title}
         </h2>
         <VariableColumn config={variables} />
       </div>
       <div className="col-8">
         <ConnectedActionBar />
-        <ConnectedLetter
-          edit={letter.edit}
-          letterText={letter.content}
-          variables={variables}
-        />
+        <ConnectedLetter />
       </div>
     </div>
   </div>
