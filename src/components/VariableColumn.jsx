@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { VariableInput } from '.';
 
-const VariableColumn = ({ config }) => {
+const VariableColumn = ({ variableConfig }) => {
   const VariableInputComponents = [];
   let variableName;
 
-  for (variableName in config) {
-    const variableValue = config[variableName]
+  for (variableName in variableConfig) {
+    const variableValue = variableConfig[variableName]
     VariableInputComponents.push(<VariableInput key={variableName} variable={{ name: variableName, value: variableValue }} />);
   }
 
@@ -20,7 +20,7 @@ const VariableColumn = ({ config }) => {
 };
 
 VariableColumn.propTypes = {
-  config: PropTypes.objectOf(PropTypes.string).isRequired,
+  variableConfig: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export { VariableColumn };

@@ -9,6 +9,14 @@ import {
   viewLetterContent
 } from '../redux';
 
+// ! ConnectedVariableColumn
+
+const mapStateToVariableColumnProps = state => ({
+  variableConfig: state.variables,
+});
+
+// ! ConnectedActionBar
+
 const mapStateToActionBarProps = state => ({
   edit: state.letter.edit,
 });
@@ -17,7 +25,7 @@ const mapDispatchToActionBarProps = dispatch => (
   bindActionCreators({ editLetterContent, viewLetterContent }, dispatch)
 );
 
-const ConnectedActionBar = connect(mapStateToActionBarProps, mapDispatchToActionBarProps)(ActionBar);
+// ! ConnectedLetter
 
 const mapStateToLetterProps = state => ({
   edit: state.letter.edit,
@@ -28,7 +36,9 @@ const mapStateToLetterProps = state => ({
 const mapDispatchToLetterProps = dispatch =>
   bindActionCreators({ updateLetterContent }, dispatch);
 
+const ConnectedActionBar = connect(mapStateToActionBarProps, mapDispatchToActionBarProps)(ActionBar);
 const ConnectedLetter = connect(mapStateToLetterProps, mapDispatchToLetterProps)(Letter);
+const ConnectedVariableColumn = connect(mapStateToVariableColumnProps)(VariableColumn);
 
 class CreatePage extends React.Component {
   constructor(props) {
@@ -39,7 +49,6 @@ class CreatePage extends React.Component {
   render() {
     const {
       letter,
-      variables
     } = this.props;
 
     return (
@@ -47,7 +56,7 @@ class CreatePage extends React.Component {
         <div className="row">
           <div className="col-4">
             <h2 className="letter-title">{letter.title}</h2>
-            <VariableColumn config={variables} />
+            <ConnectedVariableColumn />
           </div>
           <div className="col-8">
             <ConnectedActionBar />
