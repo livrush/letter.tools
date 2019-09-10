@@ -9,20 +9,20 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ButtonGroup } from '.';
 
-export const ActionBar = ({ editLetterContent, viewLetterContent }) => (
+export const ActionBar = ({ edit, editLetterContent, viewLetterContent }) => (
   <div className="actionBar-container">
     <ButtonGroup
       config={[
-        { icon: faEdit, onClick:() => editLetterContent() },
-        { icon: faEye, onClick: () => viewLetterContent() },
+        { icon: faEdit, onClick:() => editLetterContent(), disabled: edit === true },
+        { icon: faEye, onClick: () => viewLetterContent(), disabled: edit !== true },
       ]}
     />
     <ButtonGroup
       config={[
-        { icon: faSave },
-        { icon: faDownload },
-        { icon: faFile },
-        { icon: faEnvelope },
+        { icon: faSave, disabled: true },
+        { icon: faDownload, disabled: true },
+        { icon: faFile, disabled: true },
+        { icon: faEnvelope, disabled: true },
       ]}
     />
   </div>
