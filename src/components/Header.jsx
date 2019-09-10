@@ -5,8 +5,8 @@ export const Header = () => (
   <nav className="nav">
     <div className="container header">
       <Link to="/">
-        <div className="logo title link">
-          letter.tools
+        <div className="logo">
+          <img src="/img/logo.svg" alt="" srcset=""/>
         </div>
       </Link>
       {/* <div className="links">
